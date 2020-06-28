@@ -1,0 +1,13 @@
+for i in range(int(input())):
+    S,N=map(int,input().split())
+    result=0    
+    while(S>N):
+        result+=S//N
+        S=S%N
+    
+    if(S<=N and S!=0):
+      if(S%2==0 or S==1):
+        result+=1
+      else:
+        result+=2
+    print(result)
