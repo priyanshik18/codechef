@@ -1,0 +1,24 @@
+for i in range(int(input())):
+    num=int(input())
+    xdict=dict()
+    ydict=dict()
+    for i in range(4*num-1):
+        A,B=map(int,input().split())
+        if(A not in xdict):
+            xdict[A]=1
+        else:
+            xdict[A]+=1
+        if(B not in ydict):
+            ydict[B]=1
+        else:
+            ydict[B]+=1
+        
+    for key in xdict.keys():
+        if xdict[key]%2!=0:
+            x=key
+            break
+    for key in ydict.keys():    
+        if(ydict[key]%2!=0):
+            y=key
+            break
+    print(x,y)
